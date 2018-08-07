@@ -142,5 +142,8 @@
         font-size: 14px;
     }
 
+    div.card-image img.activator {
+        height: auto;
+    }
 
   }

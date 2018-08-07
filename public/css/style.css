@@ -20,7 +20,7 @@ body {
 }
 
 .header-custom {
-    margin-top: 25vh;
+    margin-top: 25.7vh;
     margin-left: 2vw;
     position: absolute;
     z-index: 1000;
@@ -218,6 +218,6 @@ div.card-content a span {
     font-size: 20px;
 }
 
-div.card-image img {
-    min-height: 220px;
+div.card-image img.activator {
+    height: 230px;
 }

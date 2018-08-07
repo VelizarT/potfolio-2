@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    var windowsize = $(window).width();
 
     $(".home-btn").click(function() {
         $([document.documentElement, document.body]).animate({
@@ -28,6 +29,26 @@ $(document).ready(function(){
         $([document.documentElement, document.body]).animate({
             scrollTop: $(".contacts").offset().top
         }, 300);
+    });
+
+    //mobile
+    $('.fixed-action-btn').floatingActionButton();
+
+    if($(window).scrollTop()) {
+        $('.header-custom').addClass('hide-on-small-only');
+        $('.fixed-action-btn').removeClass('hide');
+    } else {
+        $('.fixed-action-btn').addClass('hide');
+    }
+
+    $(window).scroll(function() {
+        if(windowsize < 600 && $(window).scrollTop()) {
+            $('.header-custom').addClass('hide-on-small-only');
+            $('.fixed-action-btn').removeClass('hide');
+        } else {
+            $('.header-custom').removeClass('hide-on-small-only');
+            $('.fixed-action-btn').addClass('hide');
+        }
     });
 
   });
